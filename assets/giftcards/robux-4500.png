@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1F1F1F"/>
+  <rect x="40" y="40" width="1200" height="640" fill="#0F0F0F" rx="20" stroke="#E2231A" stroke-width="3"/>
+  <text x="640" y="320" font-family="system-ui, sans-serif" font-size="120" font-weight="700" fill="#E2231A" text-anchor="middle">4.500</text>
+  <text x="640" y="420" font-family="system-ui, sans-serif" font-size="60" font-weight="500" fill="#FFFFFF" text-anchor="middle">ROBUX</text>
+  <text x="640" y="480" font-family="system-ui, sans-serif" font-size="28" fill="#9CA3AF" text-anchor="middle">Gift Card Digital</text>
+</svg>
