@@ -1,7 +1,9 @@
-// Robux — app.js
+// Robux — app.js (REDESIGN)
 // - Acordeão acessível para FAQ
 // - Scroll suave para âncoras
+// - Filtro de Gift Cards por preço (funcional)
 // - Micro "ripple" em botões (opcional), respeitando prefers-reduced-motion
+// - Animações de entrada nos cards
 
 (function(){
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -9,6 +11,50 @@
   // Ano no rodapé
   const elAno = document.getElementById('ano');
   if(elAno){ elAno.textContent = new Date().getFullYear(); }
+
+  // ========== FILTRO DE GIFT CARDS POR PREÇO ==========
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card[data-price-value]');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      // Atualizar botão ativo
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filtrar cards
+      cards.forEach((card, index) => {
+        const price = parseFloat(card.getAttribute('data-price-value'));
+        let shouldShow = false;
+
+        if(filter === 'all'){
+          shouldShow = true;
+        } else if(filter === '0-50'){
+          shouldShow = price <= 50;
+        } else if(filter === '50-100'){
+          shouldShow = price > 50 && price <= 100;
+        } else if(filter === '100+'){
+          shouldShow = price > 100;
+        }
+
+        // Animação suave ao filtrar
+        if(shouldShow){
+          card.classList.remove('hidden');
+          if(!prefersReduced){
+            card.style.animation = 'none';
+            setTimeout(() => {
+              card.style.animation = '';
+              card.style.animationDelay = `${index * 0.1}s`;
+            }, 10);
+          }
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
 
   // Scroll suave para âncoras internas
   document.querySelectorAll('a[href^="#"]').forEach(a => {

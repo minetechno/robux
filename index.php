@@ -27,79 +27,149 @@
         <img src="/assets/logo.svg" alt="Robux" width="32" height="32" />
         <span class="brand-text">robux</span>
       </a>
-      <ul class="menu">
-        <li><a href="#giftcards">Gift Cards</a></li>
-        <li><a href="#como-funciona">Como Funciona</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#suporte">Suporte</a></li>
-      </ul>
+      <div class="nav-actions">
+        <ul class="menu">
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#suporte">Suporte</a></li>
+        </ul>
+        <a href="#giftcards" class="btn btn-primary btn-nav">Gift Cards</a>
+      </div>
     </nav>
   </header>
 
   <main id="conteudo" class="main" role="main">
     <!-- Hero -->
     <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-text">
-        <h1 id="hero-title">Gift Cards de Robux, simples e rápido.</h1>
-        <p class="muted">Escolha o valor, finalize quando quiser. Entrega digital.</p>
-        <p>
-          <a class="btn btn-primary" href="#giftcards">Escolher Gift Card</a>
-        </p>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="shape s1"></div>
-        <div class="shape s2"></div>
-        <div class="shape s3"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">Entrega Instantânea</div>
+          <h1 id="hero-title">Gift Cards de Robux<br><span class="highlight">Simples e Rápido</span></h1>
+          <p class="hero-subtitle">Escolha o valor, finalize quando quiser. Entrega digital imediata após a compra.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-large" href="#giftcards">
+              <span>Ver Gift Cards</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="btn btn-outline" href="#como-funciona">Como Funciona</a>
+          </div>
+          <div class="hero-features">
+            <div class="feature-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>100% Seguro</span>
+            </div>
+            <div class="feature-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Entrega Rápida</span>
+            </div>
+            <div class="feature-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Suporte 24/7</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-card-mockup">
+            <div class="mockup-glow"></div>
+            <img src="/assets/giftcards/robux-800.png" alt="" />
+          </div>
+          <div class="shape s1"></div>
+          <div class="shape s2"></div>
+          <div class="shape s3"></div>
+          <div class="shape s4"></div>
+        </div>
       </div>
     </section>
 
     <!-- Grade de Gift Cards -->
     <section id="giftcards" class="container section" aria-labelledby="gc-title">
-      <h2 id="gc-title">Escolha seu Gift Card</h2>
-      <p class="muted">Somente design. Preços são placeholders.</p>
+      <div class="section-header">
+        <div>
+          <h2 id="gc-title">Escolha seu Gift Card</h2>
+          <p class="muted">Selecione o valor ideal para você</p>
+        </div>
+      </div>
+
+      <!-- Filtros por Preço -->
+      <div class="filters" role="group" aria-label="Filtrar por preço">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="0-50">Até R$ 50</button>
+        <button class="filter-btn" data-filter="50-100">R$ 50 - R$ 100</button>
+        <button class="filter-btn" data-filter="100+">Acima de R$ 100</button>
+      </div>
 
       <div class="grid-cards">
         <!-- Card 400 -->
-        <article class="card" aria-labelledby="gc-400-title">
+        <article class="card" data-price-value="25" aria-labelledby="gc-400-title">
+          <div class="card-badges">
+            <span class="badge badge-digital">Digital</span>
+          </div>
           <img class="card-img" src="/assets/giftcards/robux-400.png" alt="Gift Card de 400 Robux" loading="lazy" />
           <div class="card-body">
-            <div class="badge">Digital</div>
             <h3 id="gc-400-title">400 Robux</h3>
-            <p class="price" data-price="--">R$ —,—</p>
-            <a href="#" class="btn btn-ghost" aria-disabled="true">Ver detalhes</a>
+            <p class="card-desc">Gift Card Digital</p>
+            <div class="card-footer">
+              <p class="price" data-price="25">R$ 25,00</p>
+              <a href="#" class="btn btn-primary" aria-disabled="true">Comprar Agora</a>
+            </div>
           </div>
         </article>
 
         <!-- Card 800 -->
-        <article class="card" aria-labelledby="gc-800-title">
+        <article class="card" data-price-value="50" aria-labelledby="gc-800-title">
+          <div class="card-badges">
+            <span class="badge badge-digital">Digital</span>
+            <span class="badge badge-popular">Mais Vendido</span>
+          </div>
           <img class="card-img" src="/assets/giftcards/robux-800.png" alt="Gift Card de 800 Robux" loading="lazy" />
           <div class="card-body">
-            <div class="badge">Digital</div>
             <h3 id="gc-800-title">800 Robux</h3>
-            <p class="price" data-price="--">R$ —,—</p>
-            <a href="#" class="btn btn-ghost" aria-disabled="true">Ver detalhes</a>
+            <p class="card-desc">Gift Card Digital</p>
+            <div class="card-footer">
+              <p class="price" data-price="50">R$ 50,00</p>
+              <a href="#" class="btn btn-primary" aria-disabled="true">Comprar Agora</a>
+            </div>
           </div>
         </article>
 
         <!-- Card 1700 -->
-        <article class="card" aria-labelledby="gc-1700-title">
+        <article class="card" data-price-value="100" aria-labelledby="gc-1700-title">
+          <div class="card-badges">
+            <span class="badge badge-digital">Digital</span>
+            <span class="badge badge-value">Melhor Valor</span>
+          </div>
           <img class="card-img" src="/assets/giftcards/robux-1700.png" alt="Gift Card de 1.700 Robux" loading="lazy" />
           <div class="card-body">
-            <div class="badge">Digital</div>
             <h3 id="gc-1700-title">1.700 Robux</h3>
-            <p class="price" data-price="--">R$ —,—</p>
-            <a href="#" class="btn btn-ghost" aria-disabled="true">Ver detalhes</a>
+            <p class="card-desc">Gift Card Digital</p>
+            <div class="card-footer">
+              <p class="price" data-price="100">R$ 100,00</p>
+              <a href="#" class="btn btn-primary" aria-disabled="true">Comprar Agora</a>
+            </div>
           </div>
         </article>
 
         <!-- Card 4500 -->
-        <article class="card" aria-labelledby="gc-4500-title">
+        <article class="card" data-price-value="200" aria-labelledby="gc-4500-title">
+          <div class="card-badges">
+            <span class="badge badge-digital">Digital</span>
+          </div>
           <img class="card-img" src="/assets/giftcards/robux-4500.png" alt="Gift Card de 4.500 Robux" loading="lazy" />
           <div class="card-body">
-            <div class="badge">Digital</div>
             <h3 id="gc-4500-title">4.500 Robux</h3>
-            <p class="price" data-price="--">R$ —,—</p>
-            <a href="#" class="btn btn-ghost" aria-disabled="true">Ver detalhes</a>
+            <p class="card-desc">Gift Card Digital</p>
+            <div class="card-footer">
+              <p class="price" data-price="200">R$ 200,00</p>
+              <a href="#" class="btn btn-primary" aria-disabled="true">Comprar Agora</a>
+            </div>
           </div>
         </article>
       </div>
