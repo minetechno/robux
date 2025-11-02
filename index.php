@@ -29,9 +29,9 @@
       </a>
       <div class="nav-actions">
         <ul class="menu">
-          <li><a href="#como-funciona">Como Funciona</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#suporte">Suporte</a></li>
+          <li><a href="como-funciona.php">Como Funciona</a></li>
+          <li><a href="faq.php">FAQ</a></li>
+          <li><a href="suporte.php">Suporte</a></li>
         </ul>
         <a href="#giftcards" class="btn btn-primary btn-nav">Gift Cards</a>
       </div>
@@ -186,52 +186,6 @@
         ]
       }
       </script>
-    </section>
-
-    <!-- Como Funciona -->
-    <section id="como-funciona" class="container section" aria-labelledby="cf-title">
-      <h2 id="cf-title">Como Funciona</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-icon" aria-hidden="true">①</div>
-          <h3>Escolha o Gift Card</h3>
-          <p class="muted">Selecione o valor desejado na grade acima.</p>
-        </div>
-        <div class="step">
-          <div class="step-icon" aria-hidden="true">②</div>
-          <h3>Pague (placeholder)</h3>
-          <p class="muted">Nesta fase o pagamento ainda não está implementado.</p>
-        </div>
-        <div class="step">
-          <div class="step-icon" aria-hidden="true">③</div>
-          <h3>Receba por e‑mail</h3>
-          <p class="muted">Você receberá o código digital (mock).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="container section" aria-labelledby="faq-title">
-      <h2 id="faq-title">FAQ</h2>
-
-      <div class="faq">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq1">Quando recebo meu código?</button>
-          <div id="faq1" class="faq-a" hidden>Envio digital simulado após confirmação (projeto ainda sem pagamento).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq2">O Gift Card funciona no Brasil?</button>
-          <div id="faq2" class="faq-a" hidden>Sim, os cartões exibidos são placeholders pensados para a região BR.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq3">Posso reembolsar?</button>
-          <div id="faq3" class="faq-a" hidden>Sem política definida — apenas design. Defina regras quando implementar.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" aria-controls="faq4">Isso é oficial da Roblox?</button>
-          <div id="faq4" class="faq-a" hidden>Não. Veja o aviso legal abaixo.</div>
-        </div>
-      </div>
     </section>
 
     <!-- Aviso legal -->
