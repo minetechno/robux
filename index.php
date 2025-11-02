@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Robux — Gift Cards de Robux, simples e rápido</title>
   <meta name="description" content="Landing page estática para seleção de Gift Cards de Robux. Somente design, sem back-end.">
-  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="icon" href="assets/favicon.ico">
   <meta property="og:title" content="Robux — Gift Cards de Robux" />
   <meta property="og:description" content="Escolha valores de Gift Card de Robux. Entrega digital (placeholder)." />
-  <meta property="og:image" content="/assets/giftcards/robux-800.png" />
+  <meta property="og:image" content="assets/giftcards/robux-800.png" />
   <meta name="theme-color" content="#0F0F0F" />
   <!--
     FUTURO BACK-END: PHP 8+ + MariaDB (exclusivamente).
     Este arquivo está como .php apenas para deixar o projeto pronto para integrar back-end depois.
     Não adicionar código PHP nesta fase (somente HTML/CSS/JS).
   -->
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -24,7 +24,7 @@
   <header class="site-header" role="banner">
     <nav class="container nav" aria-label="Principal">
       <a class="brand" href="#" aria-label="Robux Home">
-        <img src="/assets/logo.svg" alt="Robux" width="32" height="32" />
+        <img src="assets/logo.svg" alt="Robux" width="32" height="32" />
         <span class="brand-text">robux</span>
       </a>
       <div class="nav-actions">
@@ -79,7 +79,7 @@
         <div class="hero-art" aria-hidden="true">
           <div class="hero-card-mockup">
             <div class="mockup-glow"></div>
-            <img src="/assets/giftcards/robux-800.png" alt="" />
+            <img src="assets/giftcards/robux-800.png" alt="" />
           </div>
           <div class="shape s1"></div>
           <div class="shape s2"></div>
@@ -112,7 +112,7 @@
           <div class="card-badges">
             <span class="badge badge-digital">Digital</span>
           </div>
-          <img class="card-img" src="/assets/giftcards/robux-400.png" alt="Gift Card de 400 Robux" loading="lazy" />
+          <img class="card-img" src="assets/giftcards/robux-400.png" alt="Gift Card de 400 Robux" loading="lazy" />
           <div class="card-body">
             <h3 id="gc-400-title">400 Robux</h3>
             <p class="card-desc">Gift Card Digital</p>
@@ -129,7 +129,7 @@
             <span class="badge badge-digital">Digital</span>
             <span class="badge badge-popular">Mais Vendido</span>
           </div>
-          <img class="card-img" src="/assets/giftcards/robux-800.png" alt="Gift Card de 800 Robux" loading="lazy" />
+          <img class="card-img" src="assets/giftcards/robux-800.png" alt="Gift Card de 800 Robux" loading="lazy" />
           <div class="card-body">
             <h3 id="gc-800-title">800 Robux</h3>
             <p class="card-desc">Gift Card Digital</p>
@@ -146,7 +146,7 @@
             <span class="badge badge-digital">Digital</span>
             <span class="badge badge-value">Melhor Valor</span>
           </div>
-          <img class="card-img" src="/assets/giftcards/robux-1700.png" alt="Gift Card de 1.700 Robux" loading="lazy" />
+          <img class="card-img" src="assets/giftcards/robux-1700.png" alt="Gift Card de 1.700 Robux" loading="lazy" />
           <div class="card-body">
             <h3 id="gc-1700-title">1.700 Robux</h3>
             <p class="card-desc">Gift Card Digital</p>
@@ -162,7 +162,7 @@
           <div class="card-badges">
             <span class="badge badge-digital">Digital</span>
           </div>
-          <img class="card-img" src="/assets/giftcards/robux-4500.png" alt="Gift Card de 4.500 Robux" loading="lazy" />
+          <img class="card-img" src="assets/giftcards/robux-4500.png" alt="Gift Card de 4.500 Robux" loading="lazy" />
           <div class="card-body">
             <h3 id="gc-4500-title">4.500 Robux</h3>
             <p class="card-desc">Gift Card Digital</p>
@@ -179,10 +179,10 @@
         "@context": "https://schema.org",
         "@type": "ItemList",
         "itemListElement": [
-          {"@type": "Product", "name": "Gift Card 400 Robux", "image": "/assets/giftcards/robux-400.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}},
-          {"@type": "Product", "name": "Gift Card 800 Robux", "image": "/assets/giftcards/robux-800.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}},
-          {"@type": "Product", "name": "Gift Card 1700 Robux", "image": "/assets/giftcards/robux-1700.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}},
-          {"@type": "Product", "name": "Gift Card 4500 Robux", "image": "/assets/giftcards/robux-4500.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}}
+          {"@type": "Product", "name": "Gift Card 400 Robux", "image": "assets/giftcards/robux-400.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}},
+          {"@type": "Product", "name": "Gift Card 800 Robux", "image": "assets/giftcards/robux-800.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}},
+          {"@type": "Product", "name": "Gift Card 1700 Robux", "image": "assets/giftcards/robux-1700.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}},
+          {"@type": "Product", "name": "Gift Card 4500 Robux", "image": "assets/giftcards/robux-4500.png", "offers": {"@type": "Offer", "price": "0.00", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder"}}
         ]
       }
       </script>
@@ -255,6 +255,6 @@
     </div>
   </footer>
 
-  <script src="/js/app.js" defer></script>
+  <script src="js/app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,121 @@
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║              🚀 CONFIGURE robux.test AGORA! 🚀                    ║
+║                                                                   ║
+║                  Siga exatamente estes 4 passos:                  ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  PASSO 1: EXECUTE O SCRIPT                                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Localize este arquivo na pasta do projeto:
+
+    📄 configurar-virtualhost.bat
+
+Clique com BOTÃO DIREITO nele e escolha:
+
+    ⚡ "Executar como administrador"
+
+Aguarde aparecer:
+    ✅ CONFIGURAÇÃO CONCLUÍDA!
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  PASSO 2: REINICIE O WAMP                                       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+1. Clique no ícone do WAMP (🟢 barra de tarefas, canto direito)
+2. Selecione: "Restart All Services"
+3. Aguarde o ícone ficar VERDE 🟢
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  PASSO 3: ABRA O NAVEGADOR                                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Digite na barra de endereço:
+
+    🌐 http://robux.test
+
+Pressione ENTER
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  PASSO 4: PRONTO! 🎉                                            ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Se aparecer o site com:
+  ✅ Header com botão "Gift Cards" vermelho
+  ✅ Hero com "Gift Cards de Robux - Simples e Rápido"
+  ✅ 4 Gift Cards com preços
+  ✅ Filtros funcionando
+
+🎉 SUCESSO! Está funcionando perfeitamente!
+
+
+═══════════════════════════════════════════════════════════════════
+
+
+❌ SE NÃO FUNCIONAR:
+
+1. Execute: verificar-status.bat (sem admin)
+   Ele vai te dizer exatamente o que está faltando
+
+2. Tente o acesso alternativo:
+   http://localhost/robux
+   (Este sempre funciona, mesmo sem virtual host)
+
+3. Se o WAMP estiver laranja/vermelho:
+   - Clique no ícone
+   - Veja qual serviço falhou
+   - Reinicie esse serviço específico
+
+
+═══════════════════════════════════════════════════════════════════
+
+
+📂 ARQUIVOS ÚTEIS NA PASTA:
+
+┌─────────────────────────────────────────────────────────────────┐
+│ ⚡ configurar-virtualhost.bat  → Configure o virtual host       │
+│ 🔍 verificar-status.bat        → Veja o que está faltando      │
+│ 🛠️ diagnostico.bat             → Diagnóstico completo           │
+│ 🧪 teste.php                   → Teste se WAMP funciona         │
+│ 📋 LEIA-ME-PRIMEIRO.txt        → Instruções detalhadas          │
+└─────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════
+
+
+💡 DICAS:
+
+• Se robux.test não abrir imediatamente, aguarde 10 segundos
+• Pressione Ctrl+F5 no navegador (atualização forçada)
+• Limpe o cache do navegador se necessário
+• Teste primeiro: http://localhost/robux
+
+
+═══════════════════════════════════════════════════════════════════
+
+
+🎯 URLS DISPONÍVEIS APÓS CONFIGURAR:
+
+Principal (Virtual Host):
+  http://robux.test           ← Use esta!
+  http://robux.test/teste.php
+
+Alternativa (Localhost):
+  http://localhost/robux       ← Sempre funciona
+  http://localhost/robux/teste.php
+
+
+═══════════════════════════════════════════════════════════════════
+
+            AGORA EXECUTE O PASSO 1 E ME AVISE! 🚀
+
+═══════════════════════════════════════════════════════════════════

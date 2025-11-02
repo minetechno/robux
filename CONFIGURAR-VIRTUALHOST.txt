@@ -1,0 +1,206 @@
+================================================================================
+  GUIA COMPLETO: CONFIGURAR robux.test NO WAMP
+================================================================================
+
+TESTE RÁPIDO PRIMEIRO:
+----------------------
+Antes de configurar o virtual host, teste se o site funciona pelo localhost:
+
+1. Abra o navegador
+2. Acesse: http://localhost/robux
+
+Se funcionar, significa que o problema é só o virtual host.
+Se NÃO funcionar, o problema é o WAMP não estar rodando.
+
+================================================================================
+CONFIGURAÇÃO DO VIRTUAL HOST - PASSO A PASSO
+================================================================================
+
+PASSO 1: EDITAR O ARQUIVO HOSTS (COMO ADMINISTRADOR)
+-----------------------------------------------------
+
+1. Pressione Windows + R
+2. Digite: notepad
+3. Clique com botão direito no Notepad > "Executar como administrador"
+4. No Notepad, vá em Arquivo > Abrir
+5. Navegue até: C:\Windows\System32\drivers\etc
+6. No campo "tipo de arquivo", selecione "Todos os arquivos (*.*)"
+7. Abra o arquivo chamado "hosts" (sem extensão)
+8. Role até o final e ADICIONE esta linha:
+
+127.0.0.1   robux.test
+
+9. Salve (Ctrl+S) e feche
+
+
+PASSO 2: ENCONTRAR A VERSÃO DO SEU APACHE
+------------------------------------------
+
+1. Abra o Explorador de Arquivos
+2. Navegue até: C:\wamp64\bin\apache
+3. Você verá uma pasta como: apache2.4.54 ou apache2.4.57
+4. ANOTE O NOME COMPLETO DA PASTA (exemplo: apache2.4.54)
+
+
+PASSO 3: EDITAR O ARQUIVO DE VIRTUAL HOSTS
+-------------------------------------------
+
+1. Abra o Notepad como ADMINISTRADOR
+2. Vá em Arquivo > Abrir
+3. Cole este caminho (SUBSTITUINDO apache2.4.54 pela sua versão):
+
+   C:\wamp64\bin\apache\apache2.4.54\conf\extra\httpd-vhosts.conf
+
+4. Role até o FINAL do arquivo
+5. ADICIONE estas linhas no final (não delete nada):
+
+# Virtual Host para robux.test
+<VirtualHost *:80>
+    ServerName robux.test
+    ServerAlias www.robux.test
+    DocumentRoot "C:/wamp64/www/robux"
+    <Directory "C:/wamp64/www/robux">
+        Options +Indexes +Includes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog "logs/robux-error.log"
+    CustomLog "logs/robux-access.log" common
+</VirtualHost>
+
+6. Salve (Ctrl+S) e feche
+
+
+PASSO 4: VERIFICAR SE VIRTUAL HOSTS ESTÃO HABILITADOS
+------------------------------------------------------
+
+1. Abra o Notepad como ADMINISTRADOR
+2. Abra este arquivo (SUBSTITUINDO apache2.4.54 pela sua versão):
+
+   C:\wamp64\bin\apache\apache2.4.54\conf\httpd.conf
+
+3. Pressione Ctrl+F e procure por: httpd-vhosts.conf
+4. Você deve encontrar esta linha:
+
+   Include conf/extra/httpd-vhosts.conf
+
+5. SE tiver um # na frente, REMOVA o #:
+
+   ERRADO:  # Include conf/extra/httpd-vhosts.conf
+   CORRETO: Include conf/extra/httpd-vhosts.conf
+
+6. Salve (Ctrl+S) e feche
+
+
+PASSO 5: ADICIONAR VIRTUAL HOST PARA LOCALHOST (IMPORTANTE!)
+-------------------------------------------------------------
+
+Volte ao arquivo httpd-vhosts.conf e ADICIONE TAMBÉM este bloco
+(para não quebrar o localhost):
+
+<VirtualHost *:80>
+    ServerName localhost
+    ServerAlias localhost
+    DocumentRoot "C:/wamp64/www"
+    <Directory "C:/wamp64/www">
+        Options +Indexes +Includes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+
+PASSO 6: REINICIAR O WAMP
+--------------------------
+
+1. Clique no ícone do WAMP na barra de tarefas (canto inferior direito)
+2. Clique em "Restart All Services"
+3. Aguarde até o ícone ficar VERDE
+
+
+PASSO 7: LIMPAR O CACHE DNS
+----------------------------
+
+1. Abra o Prompt de Comando como ADMINISTRADOR
+2. Execute este comando:
+
+   ipconfig /flushdns
+
+3. Você verá: "Configuração de IP do Windows - Cache de resolução de DNS liberado"
+
+
+PASSO 8: TESTAR NO NAVEGADOR
+-----------------------------
+
+1. Abra o navegador (recomendo Chrome ou Edge)
+2. Acesse: http://robux.test
+3. O site deve abrir!
+
+
+================================================================================
+RESOLUÇÃO DE PROBLEMAS
+================================================================================
+
+PROBLEMA 1: "Este site não pode ser acessado"
+----------------------------------------------
+SOLUÇÃO:
+- Verifique se adicionou "127.0.0.1   robux.test" no arquivo hosts
+- Confirme que NÃO tem # na frente da linha
+- Reinicie o WAMP
+
+
+PROBLEMA 2: "Forbidden - You don't have permission"
+----------------------------------------------------
+SOLUÇÃO:
+- Verifique se colocou "Require all granted" no VirtualHost
+- Confirme que o caminho está correto: C:/wamp64/www/robux
+
+
+PROBLEMA 3: Ícone do WAMP está laranja/vermelho
+------------------------------------------------
+SOLUÇÃO:
+- Porta 80 pode estar ocupada
+- Clique no ícone do WAMP > Tools > Test Port 80
+- Se estiver ocupada, desative Skype ou outros programas
+
+
+PROBLEMA 4: Página em branco ou erro 500
+-----------------------------------------
+SOLUÇÃO:
+- Verifique os logs de erro em: C:\wamp64\logs\apache_error.log
+- Certifique-se que o PHP está funcionando
+
+
+TESTE ALTERNATIVO: Acessar pelo IP
+-----------------------------------
+Se robux.test não funcionar, teste:
+http://127.0.0.1/robux
+
+
+================================================================================
+VERIFICAÇÃO RÁPIDA
+================================================================================
+
+Execute estes comandos no CMD (como Admin) para verificar:
+
+1. Ver arquivo hosts:
+   type C:\Windows\System32\drivers\etc\hosts | findstr robux
+
+2. Testar conexão:
+   ping robux.test
+
+3. Ver processos na porta 80:
+   netstat -ano | findstr :80
+
+
+================================================================================
+CONTATO PARA SUPORTE
+================================================================================
+
+Se nada funcionar, me envie:
+1. Print do ícone do WAMP (se está verde/laranja/vermelho)
+2. Conteúdo de: C:\wamp64\logs\apache_error.log (últimas 50 linhas)
+3. Resultado de: ping robux.test
+4. Resultado de: http://localhost/robux
+
+================================================================================
