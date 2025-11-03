@@ -104,6 +104,14 @@ button{font-family:inherit}
   font-weight:500;
   transition:all var(--trans);
   position:relative;
+  background:repeating-linear-gradient(
+    45deg,
+    #FF8C00,
+    #FF8C00 10px,
+    #E2231A 10px,
+    #E2231A 12px
+  );
+  color:#fff;
 }
 .menu a::after{
   content:'';
@@ -113,11 +121,20 @@ button{font-family:inherit}
   transform:translateX(-50%) scaleX(0);
   width:80%;
   height:2px;
-  background:var(--accent);
+  background:#fff;
   transition:transform var(--trans);
 }
 .menu a:hover::after{transform:translateX(-50%) scaleX(1)}
-.menu a:focus,.menu a:hover{background:var(--bg2)}
+.menu a:focus,.menu a:hover{
+  background:repeating-linear-gradient(
+    45deg,
+    #FFA500,
+    #FFA500 10px,
+    #E2231A 10px,
+    #E2231A 12px
+  );
+  transform:translateY(-2px);
+}
 
 .btn-nav{
   padding:10px 20px !important;
