@@ -592,6 +592,54 @@ button{font-family:inherit}
   background:linear-gradient(135deg, #9B5523 0%, #754331 100%);
 }
 
+/* Steam Button */
+.btn-steam{
+  background:linear-gradient(135deg, #1B2838 0%, #2A475E 100%);
+  color:#66C0F4;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+  box-shadow:0 4px 14px rgba(27,40,56,.5);
+  border:2px solid rgba(102,192,244,.2);
+  position:relative;
+  overflow:hidden;
+}
+.btn-steam::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(45deg, transparent 30%, rgba(102,192,244,.1) 50%, transparent 70%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 10px,
+      rgba(102,192,244,.05) 10px,
+      rgba(102,192,244,.05) 20px
+    );
+  pointer-events:none;
+}
+.btn-steam::after{
+  content:'⚙';
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:16px;
+  opacity:.3;
+  animation:spin 8s linear infinite;
+}
+@keyframes spin{
+  from{transform:translateY(-50%) rotate(0deg)}
+  to{transform:translateY(-50%) rotate(360deg)}
+}
+.btn-steam:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(102,192,244,.4);
+  background:linear-gradient(135deg, #2A475E 0%, #1B2838 100%);
+  border-color:rgba(102,192,244,.5);
+}
+
 /* ========== STEPS ========== */
 .steps{
   display:grid;
@@ -891,6 +939,79 @@ button{font-family:inherit}
   image-rendering:pixelated;
 }
 
+/* ========== TEMAS: STEAM ========== */
+.steam-theme{
+  --accent:#66C0F4;
+  --accent-hover:#1B2838;
+}
+
+.hero-steam::before{
+  background:radial-gradient(ellipse at top, rgba(102,192,244,.12), transparent 70%);
+}
+
+.steam-badge{
+  background:rgba(102,192,244,.1);
+  border-color:rgba(102,192,244,.3);
+  color:#66C0F4;
+  font-weight:700;
+}
+
+.highlight-steam{
+  background:linear-gradient(135deg, #66C0F4, #1B2838);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.steam-glow{
+  background:radial-gradient(circle, rgba(102,192,244,.25), transparent 70%);
+}
+
+.steam-s1{
+  background:linear-gradient(135deg, #66C0F4, #2A475E);
+  width:140px;
+  height:140px;
+  top:12%;
+  right:6%;
+  opacity:.08;
+  border-radius:8px;
+}
+
+.steam-s2{
+  background:linear-gradient(135deg, #2A475E, #1B2838);
+  width:110px;
+  height:110px;
+  bottom:22%;
+  left:8%;
+  opacity:.12;
+  border-radius:8px;
+}
+
+.steam-s3{
+  background:linear-gradient(135deg, #1B2838, #66C0F4);
+  width:70px;
+  height:70px;
+  top:45%;
+  right:18%;
+  opacity:.1;
+  border-radius:8px;
+}
+
+.steam-card-mockup{
+  position:relative;
+  width:100%;
+  max-width:300px;
+  z-index:2;
+  animation:float 6s ease-in-out infinite;
+}
+
+.steam-placeholder{
+  border-radius:8px;
+  box-shadow:0 20px 60px rgba(102,192,244,.35);
+  overflow:hidden;
+  border:2px solid rgba(102,192,244,.2);
+}
+
 /* ========== COMING SOON CARD ========== */
 .coming-soon-card{
   background:var(--bg2);
@@ -931,6 +1052,11 @@ button{font-family:inherit}
 .minecraft-coming{
   border-color:rgba(139,69,19,.3);
   background:linear-gradient(135deg, rgba(139,69,19,.05), rgba(101,67,33,.05));
+}
+
+.steam-coming{
+  border-color:rgba(102,192,244,.3);
+  background:linear-gradient(135deg, rgba(102,192,244,.05), rgba(42,71,94,.05));
 }
 
 /* ========== ABOUT GAME ========== */
@@ -1000,6 +1126,11 @@ button{font-family:inherit}
 .minecraft-box:hover{
   border-color:#8B4513;
   box-shadow:0 8px 24px rgba(139,69,19,.2);
+}
+
+.steam-box:hover{
+  border-color:#66C0F4;
+  box-shadow:0 8px 24px rgba(102,192,244,.25);
 }
 
 /* ========== RESPONSIVIDADE MOBILE ========== */
