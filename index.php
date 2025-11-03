@@ -33,6 +33,8 @@
           <li><a href="faq.php">FAQ</a></li>
           <li><a href="suporte.php">Suporte</a></li>
         </ul>
+        <a href="fortnite.php" class="btn btn-fortnite btn-nav">Fortnite</a>
+        <a href="minecraft.php" class="btn btn-minecraft btn-nav">Mine</a>
         <a href="#giftcards" class="btn btn-primary btn-nav">Gift Cards</a>
       </div>
     </nav>

@@ -524,6 +524,74 @@ button{font-family:inherit}
   background:#212121;
 }
 
+/* Fortnite Button */
+.btn-fortnite{
+  background:linear-gradient(135deg, #1A73E8 0%, #0D47A1 100%);
+  color:#fff;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  box-shadow:0 4px 14px rgba(26,115,232,.4);
+  border:2px solid rgba(255,255,255,.2);
+  position:relative;
+}
+.btn-fortnite::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, transparent 0%, rgba(255,255,255,.1) 50%, transparent 100%);
+  transform:translateX(-100%);
+  transition:transform 0.6s ease;
+}
+.btn-fortnite:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(26,115,232,.6);
+}
+.btn-fortnite:hover::before{
+  transform:translateX(100%);
+}
+
+/* Minecraft Button */
+.btn-minecraft{
+  background:linear-gradient(135deg, #8B4513 0%, #654321 100%);
+  color:#fff;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  box-shadow:0 4px 14px rgba(139,69,19,.4), inset 0 -2px 0 rgba(0,0,0,.3);
+  border:2px solid #654321;
+  position:relative;
+  font-family:'Courier New', monospace;
+  image-rendering:pixelated;
+}
+.btn-minecraft::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,.1) 2px,
+      rgba(0,0,0,.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,.1) 2px,
+      rgba(0,0,0,.1) 4px
+    );
+  pointer-events:none;
+  border-radius:inherit;
+}
+.btn-minecraft:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(139,69,19,.6), inset 0 -2px 0 rgba(0,0,0,.3);
+  background:linear-gradient(135deg, #9B5523 0%, #754331 100%);
+}
+
 /* ========== STEPS ========== */
 .steps{
   display:grid;
