@@ -502,11 +502,11 @@ button{font-family:inherit}
 .btn-primary::before{
   content:'🎮';
   position:absolute;
-  right:8px;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:18px;
-  opacity:.25;
+  left:50%;
+  top:-10px;
+  transform:translateX(-50%);
+  font-size:20px;
+  opacity:.35;
   z-index:0;
 }
 .btn-primary > *{
@@ -555,11 +555,11 @@ button{font-family:inherit}
 .btn-fortnite::before{
   content:'🔫';
   position:absolute;
-  right:8px;
-  top:50%;
-  transform:translateY(-50%) rotate(-15deg);
-  font-size:18px;
-  opacity:.25;
+  left:50%;
+  top:-10px;
+  transform:translateX(-50%) rotate(-15deg);
+  font-size:20px;
+  opacity:.35;
   z-index:0;
 }
 .btn-fortnite::after{
@@ -601,11 +601,11 @@ button{font-family:inherit}
 .btn-minecraft::before{
   content:'⛏️';
   position:absolute;
-  right:8px;
-  top:50%;
-  transform:translateY(-50%) rotate(-25deg);
-  font-size:18px;
-  opacity:.3;
+  left:50%;
+  top:-10px;
+  transform:translateX(-50%) rotate(-25deg);
+  font-size:20px;
+  opacity:.35;
   z-index:0;
 }
 .btn-minecraft::after{
