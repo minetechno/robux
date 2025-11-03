@@ -30,6 +30,7 @@
         <a href="fortnite.php" class="btn btn-fortnite btn-nav">Fortnite</a>
         <a href="minecraft.php" class="btn btn-minecraft btn-nav">Mine</a>
         <a href="steam.php" class="btn btn-steam btn-nav">Steam</a>
+        <a href="xbox.php" class="btn btn-xbox btn-nav">Xbox</a>
         <a href="index.php#giftcards" class="btn btn-primary btn-nav">Roblox</a>
       </div>
     </nav>

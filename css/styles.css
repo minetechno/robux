@@ -706,6 +706,55 @@ button{font-family:inherit}
   border-color:rgba(102,192,244,.5);
 }
 
+/* Xbox Button */
+.btn-xbox{
+  background:linear-gradient(135deg, #107C10 0%, #0E5A0E 100%);
+  color:#fff;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+  box-shadow:0 4px 14px rgba(16,124,16,.5);
+  border:2px solid rgba(255,255,255,.15);
+  position:relative;
+  overflow:hidden;
+}
+.btn-xbox::before{
+  content:'Ⓧ';
+  position:absolute;
+  left:50%;
+  top:-10px;
+  transform:translateX(-50%);
+  font-size:22px;
+  opacity:.35;
+  z-index:0;
+  font-weight:900;
+}
+.btn-xbox::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255,255,255,.15) 0%, transparent 50%),
+    linear-gradient(135deg, transparent 0%, rgba(255,255,255,.1) 50%, transparent 100%);
+  transform:translateX(-100%);
+  transition:transform 0.6s ease;
+  z-index:1;
+  pointer-events:none;
+}
+.btn-xbox > *{
+  position:relative;
+  z-index:2;
+}
+.btn-xbox:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(16,124,16,.7);
+  background:linear-gradient(135deg, #129814 0%, #107C10 100%);
+  border-color:rgba(255,255,255,.3);
+}
+.btn-xbox:hover::after{
+  transform:translateX(100%);
+}
+
 /* ========== STEPS ========== */
 .steps{
   display:grid;
@@ -1078,6 +1127,79 @@ button{font-family:inherit}
   border:2px solid rgba(102,192,244,.2);
 }
 
+/* ========== TEMAS: XBOX ========== */
+.xbox-theme{
+  --accent:#107C10;
+  --accent-hover:#0E5A0E;
+}
+
+.hero-xbox::before{
+  background:radial-gradient(ellipse at top, rgba(16,124,16,.15), transparent 70%);
+}
+
+.xbox-badge{
+  background:rgba(16,124,16,.1);
+  border-color:rgba(16,124,16,.3);
+  color:#107C10;
+  font-weight:700;
+}
+
+.highlight-xbox{
+  background:linear-gradient(135deg, #107C10, #22C55E);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.xbox-glow{
+  background:radial-gradient(circle, rgba(16,124,16,.3), transparent 70%);
+}
+
+.xbox-s1{
+  background:linear-gradient(135deg, #107C10, #0E5A0E);
+  width:130px;
+  height:130px;
+  top:14%;
+  right:7%;
+  opacity:.1;
+  border-radius:50%;
+}
+
+.xbox-s2{
+  background:linear-gradient(135deg, #0E5A0E, #22C55E);
+  width:100px;
+  height:100px;
+  bottom:24%;
+  left:6%;
+  opacity:.12;
+  border-radius:50%;
+}
+
+.xbox-s3{
+  background:linear-gradient(135deg, #22C55E, #107C10);
+  width:75px;
+  height:75px;
+  top:48%;
+  right:16%;
+  opacity:.1;
+  border-radius:50%;
+}
+
+.xbox-card-mockup{
+  position:relative;
+  width:100%;
+  max-width:300px;
+  z-index:2;
+  animation:float 6s ease-in-out infinite;
+}
+
+.xbox-placeholder{
+  border-radius:12px;
+  box-shadow:0 20px 60px rgba(16,124,16,.4);
+  overflow:hidden;
+  border:2px solid rgba(16,124,16,.2);
+}
+
 /* ========== COMING SOON CARD ========== */
 .coming-soon-card{
   background:var(--bg2);
@@ -1123,6 +1245,11 @@ button{font-family:inherit}
 .steam-coming{
   border-color:rgba(102,192,244,.3);
   background:linear-gradient(135deg, rgba(102,192,244,.05), rgba(42,71,94,.05));
+}
+
+.xbox-coming{
+  border-color:rgba(16,124,16,.3);
+  background:linear-gradient(135deg, rgba(16,124,16,.05), rgba(34,197,94,.05));
 }
 
 /* ========== ABOUT GAME ========== */
@@ -1197,6 +1324,11 @@ button{font-family:inherit}
 .steam-box:hover{
   border-color:#66C0F4;
   box-shadow:0 8px 24px rgba(102,192,244,.25);
+}
+
+.xbox-box:hover{
+  border-color:#107C10;
+  box-shadow:0 8px 24px rgba(16,124,16,.25);
 }
 
 /* ========== ROBLOX SECTION DECORATIONS ========== */
