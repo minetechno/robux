@@ -1182,6 +1182,78 @@ button{font-family:inherit}
   box-shadow:0 8px 24px rgba(102,192,244,.25);
 }
 
+/* ========== ROBLOX SECTION DECORATIONS ========== */
+.roblox-section{
+  position:relative;
+  overflow:visible;
+}
+
+.gamepad-decoration{
+  position:absolute;
+  font-size:60px;
+  opacity:.08;
+  pointer-events:none;
+  z-index:0;
+  animation:float 6s ease-in-out infinite;
+  color:#22C55E;
+}
+
+.gamepad-1{
+  top:-40px;
+  left:5%;
+  animation-delay:0s;
+  transform:rotate(-15deg);
+}
+
+.gamepad-2{
+  top:20%;
+  right:2%;
+  animation-delay:1s;
+  transform:rotate(25deg);
+  font-size:50px;
+}
+
+.gamepad-3{
+  bottom:15%;
+  left:2%;
+  animation-delay:2s;
+  transform:rotate(-20deg);
+  font-size:55px;
+}
+
+.gamepad-4{
+  top:50%;
+  right:-30px;
+  animation-delay:3s;
+  transform:rotate(15deg);
+  font-size:65px;
+  opacity:.06;
+}
+
+.gamepad-5{
+  bottom:-20px;
+  right:8%;
+  animation-delay:4s;
+  transform:rotate(-25deg);
+  font-size:52px;
+}
+
+.gamepad-6{
+  top:35%;
+  left:-40px;
+  animation-delay:5s;
+  transform:rotate(20deg);
+  font-size:58px;
+  opacity:.07;
+}
+
+.roblox-section .section-header,
+.roblox-section .filters,
+.roblox-section .grid-cards{
+  position:relative;
+  z-index:1;
+}
+
 /* ========== RESPONSIVIDADE MOBILE ========== */
 @media (max-width:640px){
   .section{padding:48px 0}
@@ -1196,4 +1268,6 @@ button{font-family:inherit}
   .coming-soon-card{padding:40px 24px}
   .about-game h2{font-size:24px}
   .feature-box{padding:24px 16px}
+  .gamepad-decoration{font-size:40px; opacity:.05}
+  .gamepad-4, .gamepad-6{display:none}
 }

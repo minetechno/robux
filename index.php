@@ -93,7 +93,15 @@
     </section>
 
     <!-- Grade de Gift Cards -->
-    <section id="giftcards" class="container section" aria-labelledby="gc-title">
+    <section id="giftcards" class="container section roblox-section" aria-labelledby="gc-title">
+      <!-- Decorative Gamepad Icons -->
+      <div class="gamepad-decoration gamepad-1" aria-hidden="true">🎮</div>
+      <div class="gamepad-decoration gamepad-2" aria-hidden="true">🎮</div>
+      <div class="gamepad-decoration gamepad-3" aria-hidden="true">🎮</div>
+      <div class="gamepad-decoration gamepad-4" aria-hidden="true">🎮</div>
+      <div class="gamepad-decoration gamepad-5" aria-hidden="true">🎮</div>
+      <div class="gamepad-decoration gamepad-6" aria-hidden="true">🎮</div>
+
       <div class="section-header">
         <div>
           <h2 id="gc-title">Escolha seu Gift Card</h2>
