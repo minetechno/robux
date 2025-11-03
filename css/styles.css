@@ -1186,12 +1186,13 @@ button{font-family:inherit}
 .roblox-section{
   position:relative;
   overflow:visible;
+  background:linear-gradient(to bottom, rgba(226,35,26,.05), rgba(226,35,26,.05));
 }
 
 .gamepad-decoration{
   position:absolute;
   font-size:60px;
-  opacity:.08;
+  opacity:.19;
   pointer-events:none;
   z-index:0;
   animation:float 6s ease-in-out infinite;
@@ -1268,6 +1269,6 @@ button{font-family:inherit}
   .coming-soon-card{padding:40px 24px}
   .about-game h2{font-size:24px}
   .feature-box{padding:24px 16px}
-  .gamepad-decoration{font-size:40px; opacity:.05}
+  .gamepad-decoration{font-size:40px; opacity:.19}
   .gamepad-4, .gamepad-6{display:none}
 }
