@@ -78,10 +78,7 @@ button{font-family:inherit}
   font-weight:700;
   font-size:20px;
   letter-spacing:.5px;
-  background:linear-gradient(135deg, #fff, #9CA3AF);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  color:var(--accent);
 }
 .nav-actions{
   display:flex;

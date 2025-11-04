@@ -17,9 +17,8 @@
   <!-- Header fixo -->
   <header class="site-header" role="banner">
     <nav class="container nav" aria-label="Principal">
-      <a class="brand" href="index.php" aria-label="Robux Home">
-        <img src="assets/logo.svg" alt="Robux" width="32" height="32" />
-        <span class="brand-text">robux</span>
+      <a class="brand" href="index.php" aria-label="Gift Home">
+        <span class="brand-text">gift</span>
       </a>
       <div class="nav-actions">
         <ul class="menu">
