@@ -31,7 +31,7 @@
         <ul class="menu">
           <li><a href="como-funciona.php">Como Funciona</a></li>
           <li><a href="faq.php">FAQ</a></li>
-          <li><a href="suporte.php">Suporte</a></li>
+          <li><a href="suporte.php">Ajuda</a></li>
         </ul>
         <a href="fortnite.php" class="btn btn-fortnite btn-nav">Fort</a>
         <a href="minecraft.php" class="btn btn-minecraft btn-nav">Mine</a>
