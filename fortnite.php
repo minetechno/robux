@@ -27,7 +27,7 @@
           <li><a href="faq.php">FAQ</a></li>
           <li><a href="suporte.php">Suporte</a></li>
         </ul>
-        <a href="fortnite.php" class="btn btn-fortnite btn-nav">Fortnite</a>
+        <a href="fortnite.php" class="btn btn-fortnite btn-nav">Fort</a>
         <a href="minecraft.php" class="btn btn-minecraft btn-nav">Mine</a>
         <a href="steam.php" class="btn btn-steam btn-nav">Steam</a>
         <a href="xbox.php" class="btn btn-xbox btn-nav">Xbox</a>
