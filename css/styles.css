@@ -135,8 +135,9 @@ button{font-family:inherit}
 }
 
 .btn-nav{
-  padding:10px 20px !important;
+  padding:8px 16px !important;
   font-weight:600;
+  font-size:14px;
   box-shadow:0 4px 14px rgba(226,35,26,.3);
 }
 
@@ -918,6 +919,52 @@ button{font-family:inherit}
   border-color:rgba(139,92,246,.5);
 }
 .btn-decks:hover::after{
+  transform:translateX(100%);
+}
+
+/* Apple Store Button */
+.btn-appstore{
+  background:linear-gradient(135deg, #0A1F44, #1A3A6B);
+  color:#FFFFFF;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  box-shadow:0 4px 14px rgba(10,31,68,.5);
+  border:2px solid rgba(255,255,255,.2);
+  position:relative;
+  overflow:hidden;
+}
+.btn-appstore::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:-8px;
+  transform:translateX(-50%);
+  font-size:20px;
+  opacity:.6;
+  z-index:0;
+  color:#FFFFFF;
+}
+.btn-appstore::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, transparent 0%, rgba(255,255,255,.1) 50%, transparent 100%);
+  transform:translateX(-100%);
+  transition:transform 0.5s ease;
+  z-index:1;
+}
+.btn-appstore > *{
+  position:relative;
+  z-index:2;
+}
+.btn-appstore:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(10,31,68,.7);
+  background:linear-gradient(135deg, #0D2855, #1E4A8A);
+  border-color:rgba(255,255,255,.3);
+}
+.btn-appstore:hover::after{
   transform:translateX(100%);
 }
 
