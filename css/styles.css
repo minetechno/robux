@@ -876,6 +876,51 @@ button{font-family:inherit}
   transform:translateX(100%);
 }
 
+/* Decks Button */
+.btn-decks{
+  background:linear-gradient(135deg, #8B5CF6, #6D28D9);
+  color:#fff;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  box-shadow:0 4px 12px rgba(139,92,246,.4);
+  border:2px solid rgba(139,92,246,.3);
+  position:relative;
+  overflow:hidden;
+}
+.btn-decks::before{
+  content:'🃏';
+  position:absolute;
+  left:50%;
+  top:-8px;
+  transform:translateX(-50%);
+  font-size:18px;
+  opacity:.6;
+  z-index:0;
+}
+.btn-decks::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, transparent 0%, rgba(255,255,255,.15) 50%, transparent 100%);
+  transform:translateX(-100%);
+  transition:transform 0.5s ease;
+  z-index:1;
+}
+.btn-decks > *{
+  position:relative;
+  z-index:2;
+}
+.btn-decks:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(139,92,246,.6);
+  background:linear-gradient(135deg, #A78BFA, #7C3AED);
+  border-color:rgba(139,92,246,.5);
+}
+.btn-decks:hover::after{
+  transform:translateX(100%);
+}
+
 /* ========== STEPS ========== */
 .steps{
   display:grid;

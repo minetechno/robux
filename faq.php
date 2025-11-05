@@ -30,7 +30,6 @@
         <a href="minecraft.php" class="btn btn-minecraft btn-nav">Mine</a>
         <a href="steam.php" class="btn btn-steam btn-nav">Steam</a>
         <a href="xbox.php" class="btn btn-xbox btn-nav">Xbox</a>
-        <a href="play-store.php" class="btn btn-playstore btn-nav">Play</a>
         <a href="https://craftmade.shop/home/" class="btn btn-craft btn-nav" target="_blank" rel="noopener noreferrer">Craft</a>
         <a href="index.php#giftcards" class="btn btn-primary btn-nav">Roblox</a>
       </div>
