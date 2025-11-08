@@ -32,12 +32,6 @@
           <li><a href="faq.php">FAQ</a></li>
           <li><a href="suporte.php">Ajuda</a></li>
         </ul>
-        <a href="fortnite.php" class="btn btn-fortnite btn-nav">Fort</a>
-        <a href="minecraft.php" class="btn btn-minecraft btn-nav">Mine</a>
-        <a href="steam.php" class="btn btn-steam btn-nav">Steam</a>
-        <a href="xbox.php" class="btn btn-xbox btn-nav">Xbox</a>
-        <a href="play-store.php" class="btn btn-playstore btn-nav">Play</a>
-        <a href="apple-store.php" class="btn btn-appstore btn-nav">Store</a>
         <a href="https://craftmade.shop/home/" class="btn btn-craft btn-nav" target="_blank" rel="noopener noreferrer">Craft</a>
         <a href="https://clashdecks.shop/" class="btn btn-decks btn-nav" target="_blank" rel="noopener noreferrer">Decks</a>
         <a href="#giftcards" class="btn btn-primary btn-nav">Roblox</a>
